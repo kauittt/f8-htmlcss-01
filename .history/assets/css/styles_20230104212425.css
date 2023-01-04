@@ -416,12 +416,12 @@ a {
 .news-data {
     display: flex;
     justify-content: space-between;
-    margin-top: 80px;
+    margin-top: 108px;
 }
 
 .news-content {
     display: flex;
-    margin-top: 50px;
+    margin-top: 125px;
     justify-content: space-between;
 }
 
@@ -553,12 +553,14 @@ a {
     color: #7b8087;
     font-size: 1.8rem;
     margin-top: 24px;
+    margin-bottom: 130px;
 }
 
 /*! subScription */
 #subScription {
     height: 409px;
     margin-top: 51px;
+    /* background-color: blue; */
     overflow: hidden;
     /* 370 */
     /* 39 */
@@ -610,6 +612,7 @@ a {
 #footer {
     height: 429px;
     margin-top: 55px;
+    background-color: violet;
     padding-bottom: 58px;
 }
 
