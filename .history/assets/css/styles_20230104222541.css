@@ -556,6 +556,7 @@ a {
 #subScription {
     height: 429px;
     overflow: hidden;
+    background: red;
 }
 
 .subScription-img {

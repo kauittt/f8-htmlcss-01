@@ -556,6 +556,8 @@ a {
 #subScription {
     height: 429px;
     overflow: hidden;
+    background: red;
+}
 }
 
 .subScription-img {
@@ -566,7 +568,7 @@ a {
     position: relative;
     background-color: #063183;
     display: flex;
-    margin-top: 59px;
+    margin-top: 39px;
 }
 
 .subScription-img-subscribe {

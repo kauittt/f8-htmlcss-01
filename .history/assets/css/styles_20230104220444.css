@@ -150,6 +150,7 @@ a {
 #client {
     height: 312px;
     margin-top: 79px;
+    background-color: red;
 }
 
 .client-wrap {
@@ -180,7 +181,7 @@ a {
 }
 
 .client-logo {
-    margin-top: 40px;
+    margin-top: 70px;
     display: flex;
     justify-content: space-between;
 }
@@ -198,7 +199,8 @@ a {
 
 /*! DESCRIPTION */
 #desc {
-    height: 489px;
+    height: 585px;
+    margin-top: 40px;
 }
 
 .desc-wrap {
@@ -207,6 +209,7 @@ a {
 
 .desc-header {
     max-width: 450px;
+    margin-top: 93px;
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -246,8 +249,8 @@ a {
 
 .desc-guide {
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 35px;
+    margin-top: 70px;
+    margin-bottom: 50px;
 }
 
 .desc-guide-item {
@@ -554,8 +557,11 @@ a {
 
 /*! subScription */
 #subScription {
-    height: 429px;
+    height: 409px;
+    margin-top: 51px;
     overflow: hidden;
+    /* 370 */
+    /* 39 */
 }
 
 .subScription-img {
@@ -566,7 +572,7 @@ a {
     position: relative;
     background-color: #063183;
     display: flex;
-    margin-top: 59px;
+    margin-top: 39px;
 }
 
 .subScription-img-subscribe {
@@ -603,7 +609,7 @@ a {
 /*! FOOTER */
 #footer {
     height: 429px;
-    /* margin-top: 55px; */
+    margin-top: 55px;
     padding-bottom: 58px;
 }
 

@@ -198,7 +198,7 @@ a {
 
 /*! DESCRIPTION */
 #desc {
-    height: 489px;
+    height: 585px;
 }
 
 .desc-wrap {
@@ -554,8 +554,16 @@ a {
 
 /*! subScription */
 #subScription {
-    height: 429px;
+    /* height: 409px; */
+    height: 727px;
+    display: flex;
+    align-items: center;
+
+    /* margin-top: 51px; */
     overflow: hidden;
+    /* background-color: #f5fafe; */
+    /* 370 */
+    /* 39 */
 }
 
 .subScription-img {
@@ -566,7 +574,7 @@ a {
     position: relative;
     background-color: #063183;
     display: flex;
-    margin-top: 59px;
+    margin-top: 39px;
 }
 
 .subScription-img-subscribe {
