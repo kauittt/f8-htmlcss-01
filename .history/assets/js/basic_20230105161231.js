@@ -49,6 +49,7 @@ function handleWindowScroll(e) {
 //! MODAL
 const loginBtn = document.querySelector(".header-nav-account__btn");
 const signBtn = document.querySelector(".header-nav-account__link");
+
 const tmpLogIn = ` <div class="modal">
 <div class="modal-content modal-logIn">
     <div class="modal-content-name">

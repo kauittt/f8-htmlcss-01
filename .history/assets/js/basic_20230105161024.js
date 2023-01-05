@@ -49,6 +49,7 @@ function handleWindowScroll(e) {
 //! MODAL
 const loginBtn = document.querySelector(".header-nav-account__btn");
 const signBtn = document.querySelector(".header-nav-account__link");
+
 const tmpLogIn = ` <div class="modal">
 <div class="modal-content modal-logIn">
     <div class="modal-content-name">
@@ -147,11 +148,13 @@ loginBtn.addEventListener("click", function (e) {
 signBtn.addEventListener("click", function (e) {
     document.body.insertAdjacentHTML("beforeend", tmpSignUp);
 });
+
 document.body.addEventListener("click", function (e) {
     if (e.target.matches(".modal")) {
         e.target.parentNode.removeChild(e.target);
     } else if (e.target.matches(".modal-content-name__icon")) {
-        const modal = e.target.parentNode.parentNode.parentNode;
-        modal.parentNode.removeChild(modal);
+        e.target.parentNode.parentNode.parentNode.parentNode.removeChild(
+            ".modal"
+        );
     }
 });

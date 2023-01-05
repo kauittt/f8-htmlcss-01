@@ -7,7 +7,6 @@ body {
 }
 :root {
     --main-color: #0f1b4c;
-    --text-color: #4f5361;
     --sub-color: #f5fafe;
 }
 
@@ -92,10 +91,11 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 1;
+    z-index: 999;
     padding: 7px 20px;
     animation: fadeIn 0.25s forwards 1;
-    background-color: white;
+    background-color: #e6f0ff;
+    color: white;
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
 }
 @keyframes fadeIn {
@@ -206,7 +206,7 @@ a {
 }
 
 .client-wrap {
-    margin-top: 70px;
+    margin-top: 63px;
 }
 
 .client-infor {
@@ -461,7 +461,7 @@ a {
 
 /*! NEWS */
 #news {
-    height: 755px;
+    height: 785px;
 }
 
 .news-data {
@@ -620,7 +620,7 @@ a {
     position: relative;
     background-color: #063183;
     display: flex;
-    margin-top: 90px;
+    margin-top: 59px;
 }
 
 .subScription-img-subscribe {
@@ -650,7 +650,7 @@ a {
 
 .subScription-img__home {
     position: absolute;
-    bottom: -20px;
+    bottom: 0px;
     right: 20%;
 }
 
@@ -710,114 +710,4 @@ a {
     font-size: 1.4rem;
     color: #c2c2c2;
     line-height: 1.7;
-}
-
-/*! MODAL */
-.modal {
-    background-color: rgba(33, 33, 33, 0.6);
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-content {
-    max-width: 470px;
-    min-width: 470px;
-    min-height: 430px;
-    border-radius: 24px;
-    background-color: #fff;
-    padding: 24px;
-    color: var(--text-color);
-    font-size: 1.4rem;
-}
-
-.modal-content a {
-    color: var(--text-color);
-}
-.modal-content-name {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 16px 0;
-}
-
-.modal-content-name__text {
-    font-size: 2rem;
-}
-
-.modal-content-name__icon {
-    color: var(--main-color);
-    font-size: 3rem;
-    padding: 8px;
-}
-
-.modal-content-name__icon:hover {
-    cursor: pointer;
-    color: rgba(15, 27, 76, 0.8);
-}
-
-.modal-content-form {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0;
-    position: relative;
-}
-
-.modal-content-form::after {
-    content: "";
-    position: absolute;
-    background-color: var(--text-color);
-
-    width: 100%;
-    height: 1px;
-    border-radius: 50%;
-    bottom: -20px;
-}
-
-.modal-content-form__input {
-    font-family: "Poppins", sans-serif;
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 24px;
-    font-size: 1.6rem;
-}
-
-.modal-content-form__forgot {
-    text-align: center;
-    transition: all 0.12s linear;
-}
-
-.modal-content-form__forgot:hover,
-.modal-content-more__signUp:hover {
-    color: var(--main-color);
-    font-weight: 600;
-}
-
-.modal-content-form__btn:hover {
-    cursor: pointer;
-}
-
-.modal-content-form__btn {
-    color: white;
-    margin-top: 16px;
-}
-
-.modal-content-more {
-    text-align: center;
-    margin-top: 45px;
-}
-
-.modal-content-more__signUp {
-    transition: all 0.12s linear;
-}
-.modal-content-form-check {
-}
-
-.modal-content-form-check__item {
 }

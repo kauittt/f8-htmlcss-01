@@ -49,6 +49,10 @@ function handleWindowScroll(e) {
 //! MODAL
 const loginBtn = document.querySelector(".header-nav-account__btn");
 const signBtn = document.querySelector(".header-nav-account__link");
+const modal = document.querySelector(".modal");
+const modalLogIn = document.querySelector(".modal-logIn");
+const modalSignUp = document.querySelector(".modal-signUp");
+
 const tmpLogIn = ` <div class="modal">
 <div class="modal-content modal-logIn">
     <div class="modal-content-name">
@@ -81,11 +85,12 @@ const tmpLogIn = ` <div class="modal">
 
     <div class="modal-content-more">
         <a href="#!" class="modal-content-more__signUp">
-            Don't have an account? Sign up
+            Dont have an account? Sign up
         </a>
     </div>
 </div>
 </div>`;
+
 const tmpSignUp = `<div class="modal">
 <div class="modal-content modal-signUp">
     <div class="modal-content-name">
@@ -141,17 +146,16 @@ const tmpSignUp = `<div class="modal">
 </div>
 </div>`;
 
+// loginBtn.addEventListener("click", function (e) {
+//     modal.classList.add("modal--show");
+//     modalLogIn.classList.add("modal-logIn--show");
+// });
+
+// signBtn.addEventListener("click", function (e) {
+//     modal.classList.add("modal--show");
+//     modalSignUp.classList.add("modal-signUp--show");
+// });
+
 loginBtn.addEventListener("click", function (e) {
     document.body.insertAdjacentHTML("beforeend", tmpLogIn);
-});
-signBtn.addEventListener("click", function (e) {
-    document.body.insertAdjacentHTML("beforeend", tmpSignUp);
-});
-document.body.addEventListener("click", function (e) {
-    if (e.target.matches(".modal")) {
-        e.target.parentNode.removeChild(e.target);
-    } else if (e.target.matches(".modal-content-name__icon")) {
-        const modal = e.target.parentNode.parentNode.parentNode;
-        modal.parentNode.removeChild(modal);
-    }
 });

@@ -7,7 +7,6 @@ body {
 }
 :root {
     --main-color: #0f1b4c;
-    --text-color: #4f5361;
     --sub-color: #f5fafe;
 }
 
@@ -727,97 +726,8 @@ a {
 }
 
 .modal-content {
-    max-width: 470px;
-    min-width: 470px;
-    min-height: 430px;
-    border-radius: 24px;
+    min-width: 700px;
+    height: 400px;
+    border-radius: 12px;
     background-color: #fff;
-    padding: 24px;
-    color: var(--text-color);
-    font-size: 1.4rem;
-}
-
-.modal-content a {
-    color: var(--text-color);
-}
-.modal-content-name {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 16px 0;
-}
-
-.modal-content-name__text {
-    font-size: 2rem;
-}
-
-.modal-content-name__icon {
-    color: var(--main-color);
-    font-size: 3rem;
-    padding: 8px;
-}
-
-.modal-content-name__icon:hover {
-    cursor: pointer;
-    color: rgba(15, 27, 76, 0.8);
-}
-
-.modal-content-form {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0;
-    position: relative;
-}
-
-.modal-content-form::after {
-    content: "";
-    position: absolute;
-    background-color: var(--text-color);
-
-    width: 100%;
-    height: 1px;
-    border-radius: 50%;
-    bottom: -20px;
-}
-
-.modal-content-form__input {
-    font-family: "Poppins", sans-serif;
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 24px;
-    font-size: 1.6rem;
-}
-
-.modal-content-form__forgot {
-    text-align: center;
-    transition: all 0.12s linear;
-}
-
-.modal-content-form__forgot:hover,
-.modal-content-more__signUp:hover {
-    color: var(--main-color);
-    font-weight: 600;
-}
-
-.modal-content-form__btn:hover {
-    cursor: pointer;
-}
-
-.modal-content-form__btn {
-    color: white;
-    margin-top: 16px;
-}
-
-.modal-content-more {
-    text-align: center;
-    margin-top: 45px;
-}
-
-.modal-content-more__signUp {
-    transition: all 0.12s linear;
-}
-.modal-content-form-check {
-}
-
-.modal-content-form-check__item {
 }

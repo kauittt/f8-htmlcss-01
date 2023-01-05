@@ -737,6 +737,13 @@ a {
     font-size: 1.4rem;
 }
 
+.modal-logIn {
+    /* display: none; */
+}
+
+.modal-signUp {
+}
+
 .modal-content a {
     color: var(--text-color);
 }

@@ -49,6 +49,10 @@ function handleWindowScroll(e) {
 //! MODAL
 const loginBtn = document.querySelector(".header-nav-account__btn");
 const signBtn = document.querySelector(".header-nav-account__link");
+const modal = document.querySelector(".modal");
+const modalLogIn = document.querySelector(".modal-logIn");
+const modalSignUp = document.querySelector(".modal-signUp");
+
 const tmpLogIn = ` <div class="modal">
 <div class="modal-content modal-logIn">
     <div class="modal-content-name">
@@ -81,77 +85,76 @@ const tmpLogIn = ` <div class="modal">
 
     <div class="modal-content-more">
         <a href="#!" class="modal-content-more__signUp">
-            Don't have an account? Sign up
+            Dont have an account? Sign up
         </a>
     </div>
 </div>
+
 </div>`;
-const tmpSignUp = `<div class="modal">
-<div class="modal-content modal-signUp">
-    <div class="modal-content-name">
-        <p class="modal-content-name__text">Sign up</p>
-        <i
-            class="fa-solid fa-circle-xmark modal-content-name__icon"
-        ></i>
+
+const tmpSignUp = `<div class="modal-content modal-signUp">
+<div class="modal-content-name">
+    <p class="modal-content-name__text">Sign up</p>
+    <i
+        class="fa-solid fa-circle-xmark modal-content-name__icon"
+    ></i>
+</div>
+
+<form class="modal-content-form">
+    <input
+        type="text"
+        name=""
+        id=""
+        class="modal-content-form__input"
+        placeholder="Email"
+    />
+    <input
+        type="text"
+        name=""
+        id=""
+        class="modal-content-form__input"
+        placeholder="Password"
+    />
+
+    <input
+        type="text"
+        name=""
+        id=""
+        class="modal-content-form__input"
+        placeholder="Confirm password"
+    />
+    <div class="modal-content-form-check">
+        <p class="modal-content-form-check__item">
+            * 8-12 chars
+        </p>
+        <p class="modal-content-form-check__item">
+            * 1 uppercase
+        </p>
+        <p class="modal-content-form-check__item">* 1 number</p>
+        <p class="modal-content-form-check__item">
+            * 1 special character
+        </p>
     </div>
+    <div class="btn modal-content-form__btn">Sign up</div>
+</form>
 
-    <form class="modal-content-form">
-        <input
-            type="text"
-            name=""
-            id=""
-            class="modal-content-form__input"
-            placeholder="Email"
-        />
-        <input
-            type="text"
-            name=""
-            id=""
-            class="modal-content-form__input"
-            placeholder="Password"
-        />
-
-        <input
-            type="text"
-            name=""
-            id=""
-            class="modal-content-form__input"
-            placeholder="Confirm password"
-        />
-        <div class="modal-content-form-check">
-            <p class="modal-content-form-check__item">
-                * 8-12 chars
-            </p>
-            <p class="modal-content-form-check__item">
-                * 1 uppercase
-            </p>
-            <p class="modal-content-form-check__item">* 1 number</p>
-            <p class="modal-content-form-check__item">
-                * 1 special character
-            </p>
-        </div>
-        <div class="btn modal-content-form__btn">Sign up</div>
-    </form>
-
-    <div class="modal-content-more">
-        <a href="#!" class="modal-content-more__signUp">
-            Already have an account? Log in
-        </a>
-    </div>
+<div class="modal-content-more">
+    <a href="#!" class="modal-content-more__signUp">
+        Already have an account? Log in
+    </a>
 </div>
 </div>`;
+
+// loginBtn.addEventListener("click", function (e) {
+//     modal.classList.add("modal--show");
+//     modalLogIn.classList.add("modal-logIn--show");
+// });
+
+// signBtn.addEventListener("click", function (e) {
+//     modal.classList.add("modal--show");
+//     modalSignUp.classList.add("modal-signUp--show");
+// });
 
 loginBtn.addEventListener("click", function (e) {
     document.body.insertAdjacentHTML("beforeend", tmpLogIn);
-});
-signBtn.addEventListener("click", function (e) {
-    document.body.insertAdjacentHTML("beforeend", tmpSignUp);
-});
-document.body.addEventListener("click", function (e) {
-    if (e.target.matches(".modal")) {
-        e.target.parentNode.removeChild(e.target);
-    } else if (e.target.matches(".modal-content-name__icon")) {
-        const modal = e.target.parentNode.parentNode.parentNode;
-        modal.parentNode.removeChild(modal);
-    }
 });

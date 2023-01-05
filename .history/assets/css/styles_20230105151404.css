@@ -737,6 +737,13 @@ a {
     font-size: 1.4rem;
 }
 
+.modal-logIn {
+    /* display: none; */
+}
+
+.modal-signUp {
+}
+
 .modal-content a {
     color: var(--text-color);
 }
@@ -769,7 +776,7 @@ a {
     position: relative;
 }
 
-.modal-content-form::after {
+/* .modal-content-form::after {
     content: "";
     position: absolute;
     background-color: var(--text-color);
@@ -778,7 +785,7 @@ a {
     height: 1px;
     border-radius: 50%;
     bottom: -20px;
-}
+} */
 
 .modal-content-form__input {
     font-family: "Poppins", sans-serif;

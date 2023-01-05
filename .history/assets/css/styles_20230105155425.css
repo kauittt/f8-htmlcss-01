@@ -724,6 +724,11 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    /* display: none; */
+}
+
+.modal.modal--show {
+    display: flex;
 }
 
 .modal-content {
@@ -735,6 +740,16 @@ a {
     padding: 24px;
     color: var(--text-color);
     font-size: 1.4rem;
+}
+
+.modal-logIn,
+.modal-signUp {
+    /* display: none; */
+}
+
+.modal-logIn.modal-logIn--show,
+.modal-signUp.modal-signUp--show {
+    display: block;
 }
 
 .modal-content a {
