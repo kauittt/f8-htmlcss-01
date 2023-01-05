@@ -59,27 +59,28 @@ const tmpSignIn = ` <div class="modal">
     </div>
 
     <form class="modal-content-form">
-    <input
-    type="text"
-    name=""
-    class="modal-content-form__input email"
-    placeholder="Email"
-/>
-<div class="modal-content-form-email-check">
-    <i
-        class="fa-solid fa-circle-xmark modal-content-form-email-check__item modal-content-form-email-check__item--time"
-    ></i>
-    <i
-        class="fa-solid fa-circle-check modal-content-form-email-check__item modal-content-form-email-check__item--check"
-    ></i>
-</div>
         <input
-            type="password"
+            type="text"
             name=""
+            id=""
+            class="modal-content-form__input"
+            placeholder="Email"
+        />
+        <div class="modal-content-form-icon">
+            <i
+                class="fa-solid fa-circle-xmark modal-content-form-icon__item modal-content-form-icon__item--time"
+            ></i>
+            <i
+                class="fa-solid fa-circle-check modal-content-form-icon__item modal-content-form-icon__item--check"
+            ></i>
+        </div>
+        <input
+            type="text"
+            name=""
+            id=""
             class="modal-content-form__input"
             placeholder="Password"
         />
-        <i class="fa-solid fa-eye password-eye"></i>
         <a href="#!" class="modal-content-form__forgot">
             Forgot your password?
         </a>
@@ -167,9 +168,6 @@ document.body.addEventListener("click", function (e) {
     } else if (e.target.matches(".modal-content-name__icon")) {
         const modal = e.target.parentNode.parentNode.parentNode;
         modal.parentNode.removeChild(modal);
-    } else if (e.target.matches(".modal-content-form__btn")) {
-        const modal = e.target.parentNode.parentNode.parentNode;
-        modal.parentNode.removeChild(modal);
     } else if (e.target.matches(".modal-content-more__signUp")) {
         const modal = e.target.parentNode.parentNode.parentNode;
         modal.parentNode.removeChild(modal);
@@ -241,17 +239,5 @@ document.body.addEventListener("click", function (e) {
             }
             console.log(count);
         });
-    } else if (e.target.matches(".password-eye")) {
-        const eye = document.querySelector(".password-eye");
-        const input = eye.previousElementSibling;
-        if (eye.classList.contains("fa-eye-slash")) {
-            input.setAttribute("type", "password");
-            eye.classList.remove("fa-eye-slash");
-            eye.classList.add("fa-eye");
-        } else {
-            input.setAttribute("type", "text");
-            eye.classList.add("fa-eye-slash");
-            eye.classList.remove("fa-eye");
-        }
     }
 });

@@ -713,7 +713,7 @@ a {
 
 /*! MODAL */
 .modal {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.7);
     position: fixed;
     top: 0;
     right: 0;
@@ -723,7 +723,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: modalShow 0.12s ease-in;
+    animation: modalShow 0.5s linear;
     transition: all 0.5s ease;
 }
 
@@ -744,7 +744,7 @@ a {
     min-height: 430px;
     border-radius: 24px;
     background-color: #fff;
-    padding: 30px;
+    padding: 24px;
     color: var(--text-color);
     font-size: 1.4rem;
 }
@@ -756,6 +756,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 16px 0;
 }
 
 .modal-content-name__text {
@@ -805,8 +806,7 @@ a {
 }
 
 .modal-content-form__forgot:hover,
-.modal-content-more__signUp:hover,
-.modal-content-more__signIn:hover {
+.modal-content-more__signUp:hover {
     color: var(--main-color);
     font-weight: 600;
 }
@@ -825,68 +825,11 @@ a {
     margin-top: 45px;
 }
 
-.modal-content-more__signUp,
-.modal-content-more__signIn {
+.modal-content-more__signUp {
     transition: all 0.12s linear;
-    padding: 14px;
 }
 .modal-content-form-check {
 }
 
 .modal-content-form-check__item {
-    transition: all 0.25s ease;
-    /* color: var(--text-color); */
-    color: #e74c3c;
-    padding: 5px 0;
-}
-
-.modal-content-form-check__item.valid {
-    color: #07a787;
-}
-
-.modal-content-form-email-check {
-    position: absolute;
-    right: 35px;
-    top: 17px;
-    display: flex;
-}
-
-.modal-content-form-email-check__item,
-.modal-content-form-password-check__item {
-    font-size: 2rem;
-    position: absolute;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.25s ease;
-}
-
-.modal-content-form-email-check.error
-    .modal-content-form-email-check__item--time {
-    color: #e74c3c;
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content-form-email-check.valid
-    .modal-content-form-email-check__item--check,
-.modal-content-form-password-check.valid
-    .modal-content-form-password-check__item {
-    color: #07a787;
-    opacity: 1;
-    visibility: visible;
-}
-
-.modal-content-form-password-check {
-    position: absolute;
-    right: 35px;
-    display: flex;
-    top: 92px;
-}
-
-.password-eye {
-    font-size: 2rem;
-    position: absolute;
-    top: 92px;
-    right: 15px;
-    cursor: pointer;
 }

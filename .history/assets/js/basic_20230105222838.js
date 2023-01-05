@@ -168,8 +168,6 @@ document.body.addEventListener("click", function (e) {
         const modal = e.target.parentNode.parentNode.parentNode;
         modal.parentNode.removeChild(modal);
     } else if (e.target.matches(".modal-content-form__btn")) {
-        const modal = e.target.parentNode.parentNode.parentNode;
-        modal.parentNode.removeChild(modal);
     } else if (e.target.matches(".modal-content-more__signUp")) {
         const modal = e.target.parentNode.parentNode.parentNode;
         modal.parentNode.removeChild(modal);

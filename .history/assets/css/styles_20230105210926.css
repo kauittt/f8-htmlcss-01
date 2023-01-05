@@ -744,7 +744,7 @@ a {
     min-height: 430px;
     border-radius: 24px;
     background-color: #fff;
-    padding: 30px;
+    padding: 24px;
     color: var(--text-color);
     font-size: 1.4rem;
 }
@@ -835,24 +835,22 @@ a {
 
 .modal-content-form-check__item {
     transition: all 0.25s ease;
-    /* color: var(--text-color); */
-    color: #e74c3c;
-    padding: 5px 0;
+    color: var(--text-color);
+    padding: 5 px 0;
 }
 
 .modal-content-form-check__item.valid {
     color: #07a787;
 }
 
-.modal-content-form-email-check {
+.modal-content-form-icon {
     position: absolute;
     right: 35px;
     top: 17px;
     display: flex;
 }
 
-.modal-content-form-email-check__item,
-.modal-content-form-password-check__item {
+.modal-content-form-icon__item {
     font-size: 2rem;
     position: absolute;
     opacity: 0;
@@ -860,33 +858,14 @@ a {
     transition: all 0.25s ease;
 }
 
-.modal-content-form-email-check.error
-    .modal-content-form-email-check__item--time {
+.modal-content-form-icon.error .modal-content-form-icon__item--time {
     color: #e74c3c;
     opacity: 1;
     visibility: visible;
 }
 
-.modal-content-form-email-check.valid
-    .modal-content-form-email-check__item--check,
-.modal-content-form-password-check.valid
-    .modal-content-form-password-check__item {
+.modal-content-form-icon.valid .modal-content-form-icon__item--check {
     color: #07a787;
     opacity: 1;
     visibility: visible;
-}
-
-.modal-content-form-password-check {
-    position: absolute;
-    right: 35px;
-    display: flex;
-    top: 92px;
-}
-
-.password-eye {
-    font-size: 2rem;
-    position: absolute;
-    top: 92px;
-    right: 15px;
-    cursor: pointer;
 }

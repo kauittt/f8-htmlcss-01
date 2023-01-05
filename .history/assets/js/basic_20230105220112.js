@@ -167,9 +167,6 @@ document.body.addEventListener("click", function (e) {
     } else if (e.target.matches(".modal-content-name__icon")) {
         const modal = e.target.parentNode.parentNode.parentNode;
         modal.parentNode.removeChild(modal);
-    } else if (e.target.matches(".modal-content-form__btn")) {
-        const modal = e.target.parentNode.parentNode.parentNode;
-        modal.parentNode.removeChild(modal);
     } else if (e.target.matches(".modal-content-more__signUp")) {
         const modal = e.target.parentNode.parentNode.parentNode;
         modal.parentNode.removeChild(modal);
@@ -243,15 +240,13 @@ document.body.addEventListener("click", function (e) {
         });
     } else if (e.target.matches(".password-eye")) {
         const eye = document.querySelector(".password-eye");
-        const input = eye.previousElementSibling;
-        if (eye.classList.contains("fa-eye-slash")) {
-            input.setAttribute("type", "password");
-            eye.classList.remove("fa-eye-slash");
-            eye.classList.add("fa-eye");
-        } else {
-            input.setAttribute("type", "text");
-            eye.classList.add("fa-eye-slash");
-            eye.classList.remove("fa-eye");
-        }
+        const input = eye.previousSibling;
+        console.log(input);
+        eye.addEventListener("click", function (E) {
+            if (eye.classList.contains("fa-eye-slash")) {
+            } else {
+            }
+            // eye.classList.toggle("fa-eye");
+        });
     }
 });

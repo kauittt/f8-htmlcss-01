@@ -879,14 +879,7 @@ a {
 .modal-content-form-password-check {
     position: absolute;
     right: 35px;
+    top: 17px;
     display: flex;
     top: 92px;
-}
-
-.password-eye {
-    font-size: 2rem;
-    position: absolute;
-    top: 92px;
-    right: 15px;
-    cursor: pointer;
 }

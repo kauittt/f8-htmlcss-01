@@ -59,27 +59,28 @@ const tmpSignIn = ` <div class="modal">
     </div>
 
     <form class="modal-content-form">
-    <input
-    type="text"
-    name=""
-    class="modal-content-form__input email"
-    placeholder="Email"
-/>
-<div class="modal-content-form-email-check">
-    <i
-        class="fa-solid fa-circle-xmark modal-content-form-email-check__item modal-content-form-email-check__item--time"
-    ></i>
-    <i
-        class="fa-solid fa-circle-check modal-content-form-email-check__item modal-content-form-email-check__item--check"
-    ></i>
-</div>
         <input
-            type="password"
+            type="text"
             name=""
+            id=""
+            class="modal-content-form__input"
+            placeholder="Email"
+        />
+        <div class="modal-content-form-icon">
+            <i
+                class="fa-solid fa-circle-xmark modal-content-form-icon__item modal-content-form-icon__item--time"
+            ></i>
+            <i
+                class="fa-solid fa-circle-check modal-content-form-icon__item modal-content-form-icon__item--check"
+            ></i>
+        </div>
+        <input
+            type="text"
+            name=""
+            id=""
             class="modal-content-form__input"
             placeholder="Password"
         />
-        <i class="fa-solid fa-eye password-eye"></i>
         <a href="#!" class="modal-content-form__forgot">
             Forgot your password?
         </a>
@@ -110,12 +111,12 @@ const tmpSignUp = `<div class="modal">
             class="modal-content-form__input email"
             placeholder="Email"
         />
-        <div class="modal-content-form-email-check">
+        <div class="modal-content-form-icon">
             <i
-                class="fa-solid fa-circle-xmark modal-content-form-email-check__item modal-content-form-email-check__item--time"
+                class="fa-solid fa-circle-xmark modal-content-form-icon__item modal-content-form-icon__item--time"
             ></i>
             <i
-                class="fa-solid fa-circle-check modal-content-form-email-check__item modal-content-form-email-check__item--check"
+                class="fa-solid fa-circle-check modal-content-form-icon__item modal-content-form-icon__item--check"
             ></i>
         </div>
         <input
@@ -125,11 +126,6 @@ const tmpSignUp = `<div class="modal">
             class="modal-content-form__input password"
             placeholder="Password"
         />
-        <div class="modal-content-form-password-check">
-            <i
-                class="fa-solid fa-circle-check modal-content-form-password-check__item"
-            ></i>
-        </div>
         <div class="modal-content-form-check">
             <p class="modal-content-form-check__item">
                 * 8-12 chars
@@ -167,9 +163,6 @@ document.body.addEventListener("click", function (e) {
     } else if (e.target.matches(".modal-content-name__icon")) {
         const modal = e.target.parentNode.parentNode.parentNode;
         modal.parentNode.removeChild(modal);
-    } else if (e.target.matches(".modal-content-form__btn")) {
-        const modal = e.target.parentNode.parentNode.parentNode;
-        modal.parentNode.removeChild(modal);
     } else if (e.target.matches(".modal-content-more__signUp")) {
         const modal = e.target.parentNode.parentNode.parentNode;
         modal.parentNode.removeChild(modal);
@@ -179,8 +172,9 @@ document.body.addEventListener("click", function (e) {
         modal.parentNode.removeChild(modal);
         signUpBtn.click();
     } else if (e.target.matches(".email")) {
-        const icons = document.querySelector(".modal-content-form-email-check");
-        const regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        const icons = document.querySelector(".modal-content-form-icon");
+        const regex =
+            /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         e.target.addEventListener("input", function (input) {
             if (!input.target.value) {
                 icons.classList.remove("error");
@@ -201,57 +195,41 @@ document.body.addEventListener("click", function (e) {
         const items = document.querySelectorAll(
             ".modal-content-form-check__item"
         );
-        const passwordCheck = document.querySelector(
-            ".modal-content-form-password-check"
-        );
 
         e.target.addEventListener("input", function (E) {
-            let count = 0;
             function handleValid(item, regex, input) {
                 if (regex.test(input)) {
                     item.classList.add("valid");
-                    return true;
                 } else {
-                    item.classList.remove("valid");
-                    return false;
+                    item.classList.re("valid");
                 }
             }
 
             if (E.target.value.length >= 8 && E.target.value.length <= 12) {
                 items[0].classList.add("valid");
-                count++;
             } else {
                 items[0].classList.remove("valid");
-                count++;
             }
 
-            handleValid(items[1], /[A-Z]/, E.target.value) ? count++ : count--;
-            handleValid(items[2], /\d/, E.target.value) ? count++ : count--;
-            handleValid(
-                items[3],
-                /[-._!"`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|]+/,
-                E.target.value
-            )
-                ? count++
-                : count--;
-            if (count == 4) {
-                passwordCheck.classList.add("valid");
+            if (handleValid(/[A-Z]/)) {
+                items[1].classList.add("valid");
             } else {
-                passwordCheck.classList.remove("valid");
+                items[1].classList.remove("valid");
             }
-            console.log(count);
+
+            if (handleValid(/\d/)) {
+                items[2].classList.add("valid");
+            } else {
+                items[2].classList.remove("valid");
+            }
+
+            if (
+                handleValid(/[-._!"`'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|]+/)
+            ) {
+                items[2].classList.add("valid");
+            } else {
+                items[2].classList.remove("valid");
+            }
         });
-    } else if (e.target.matches(".password-eye")) {
-        const eye = document.querySelector(".password-eye");
-        const input = eye.previousElementSibling;
-        if (eye.classList.contains("fa-eye-slash")) {
-            input.setAttribute("type", "password");
-            eye.classList.remove("fa-eye-slash");
-            eye.classList.add("fa-eye");
-        } else {
-            input.setAttribute("type", "text");
-            eye.classList.add("fa-eye-slash");
-            eye.classList.remove("fa-eye");
-        }
     }
 });
