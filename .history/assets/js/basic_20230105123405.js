@@ -37,10 +37,18 @@ const header = document.querySelector("#header");
 window.addEventListener("scroll", debounceFn(handleWindowScroll, 25));
 
 function handleWindowScroll(e) {
+    console.log(headerNav.offsetTop);
+    // console.log(headerNav.style.marginTop);
     if (window.pageYOffset >= headerNav.offsetHeight) {
         headerNav.classList.add("header-nav--fixed");
-
-        header.style.paddingTop = `${78}px`;
+        // document.body.style.paddingTop = `${
+        //     headerNav.style.margintop + headerNav.offsetHeight
+        // }px`;
+        // console.log(
+        //     "🚀 ~ file: basic.js:45 ~ handleWindowScroll ~ headerNav.style.margintop",
+        //     headerNav.style.margintop
+        // );
+        header.style.paddingTop = `${80}px`;
     } else {
         headerNav.classList.remove("header-nav--fixed");
         header.style.paddingTop = `0px`;

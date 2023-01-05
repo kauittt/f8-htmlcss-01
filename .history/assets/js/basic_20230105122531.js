@@ -33,16 +33,18 @@ function debounceFn(func, wait, immediate) {
     };
 }
 const headerNav = document.querySelector(".header-nav");
-const header = document.querySelector("#header");
+
 window.addEventListener("scroll", debounceFn(handleWindowScroll, 25));
 
 function handleWindowScroll(e) {
+    console.log(headerNav.style.marginTop);
     if (window.pageYOffset >= headerNav.offsetHeight) {
         headerNav.classList.add("header-nav--fixed");
-
-        header.style.paddingTop = `${78}px`;
+        document.body.style.paddingTop = `${
+            headerNav.style.marginTop + headerNav.offsetHeight
+        }px`;
     } else {
         headerNav.classList.remove("header-nav--fixed");
-        header.style.paddingTop = `0px`;
+        document.body.style.paddingTop = `0px`;
     }
 }

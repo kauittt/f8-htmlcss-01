@@ -85,26 +85,6 @@ a {
     height: 40px;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
-    transition: all 0.2s ease;
-}
-
-.header-nav--fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    margin-top: 0;
-    animation: fade 0.25s forwards 1;
-}
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
 }
 
 .header-nav-list {
@@ -146,7 +126,6 @@ a {
     text-align: center;
     color: #0f1b4c;
     background-color: #f5fafe;
-    font-weight: 500;
     transition: all 0.12s linear;
 }
 

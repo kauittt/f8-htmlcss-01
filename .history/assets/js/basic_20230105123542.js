@@ -39,8 +39,10 @@ window.addEventListener("scroll", debounceFn(handleWindowScroll, 25));
 function handleWindowScroll(e) {
     if (window.pageYOffset >= headerNav.offsetHeight) {
         headerNav.classList.add("header-nav--fixed");
-
-        header.style.paddingTop = `${78}px`;
+        document.body.style.paddingTop = `${
+            headerNav.offsetTop + headerNav.offsetHeight
+        }px`;
+        // header.style.paddingTop = `${80}px`;
     } else {
         headerNav.classList.remove("header-nav--fixed");
         header.style.paddingTop = `0px`;

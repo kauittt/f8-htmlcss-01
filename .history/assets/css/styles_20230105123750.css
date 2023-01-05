@@ -85,8 +85,8 @@ a {
     height: 40px;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
-    transition: all 0.2s ease;
+    background-color: red;
+    transition: all 0.25s linear;
 }
 
 .header-nav--fixed {

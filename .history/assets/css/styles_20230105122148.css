@@ -85,8 +85,7 @@ a {
     height: 40px;
     justify-content: space-between;
     align-items: center;
-    /* background-color: red; */
-    transition: all 0.2s ease;
+    background-color: red;
 }
 
 .header-nav--fixed {
@@ -96,7 +95,7 @@ a {
     width: 100%;
     z-index: 999;
     margin-top: 0;
-    animation: fade 0.25s forwards 1;
+    animation: fadeIn 0.12s linear;
 }
 @keyframes fadeIn {
     from {
