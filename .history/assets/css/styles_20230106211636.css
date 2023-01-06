@@ -693,26 +693,14 @@ a {
 
 .footer-list__item {
     max-width: 260px;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.6rem;
     line-height: 1.5;
     color: #7a7a7e;
-    transition: all 0.12s linear;
 }
 
 .footer-list__item + .footer-list__item {
     margin-top: 18px;
-}
-
-.footer-list__item:hover,
-.footer-list__item__icon:hover {
-    color: var(--main-color);
-    cursor: pointer;
-}
-
-.footer-list__item--noHover:hover {
-    color: #7a7a7e;
-    cursor: default;
 }
 
 .footer-list__item--title {

@@ -257,14 +257,5 @@ document.body.addEventListener("click", function (e) {
 });
 
 //! CLIENT
-// client-logo__item--select
 const logoItems = document.querySelectorAll(".client-logo__item");
-[...logoItems].forEach((item) => {
-    item.addEventListener("mouseenter", function (e) {
-        item.classList.add("client-logo__item--select");
-    });
-
-    item.addEventListener("mouseleave", function (e) {
-        item.classList.remove("client-logo__item--select");
-    });
-});
+console.log("🚀 ~ file: basic.js:261 ~ logoItems", logoItems);

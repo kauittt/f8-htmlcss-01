@@ -260,11 +260,18 @@ document.body.addEventListener("click", function (e) {
 // client-logo__item--select
 const logoItems = document.querySelectorAll(".client-logo__item");
 [...logoItems].forEach((item) => {
-    item.addEventListener("mouseenter", function (e) {
-        item.classList.add("client-logo__item--select");
+    item.addEventListener("mouseenter", function(e) {
+        
+        item.addEventListener("client-logo__item--select");
     });
 
-    item.addEventListener("mouseleave", function (e) {
-        item.classList.remove("client-logo__item--select");
+    item.addEventListener("mouseleave", function(e) {
+    item.classList.remove("client-logo__item--select");
+        
     });
-});
+})
+
+
+[...logoItems].forEach((item) => {
+    item.classList.remove("client-logo__item--select");
+})

@@ -240,6 +240,7 @@ document.body.addEventListener("click", function (e) {
                 passwordCheck.classList.remove("valid");
             }
         }
+        e.target.addEventListener("focus", handlePasswordCheck);
         e.target.addEventListener("input", handlePasswordCheck);
     } else if (e.target.matches(".password-eye")) {
         const eye = document.querySelector(".password-eye");
@@ -254,17 +255,4 @@ document.body.addEventListener("click", function (e) {
             eye.classList.remove("fa-eye");
         }
     }
-});
-
-//! CLIENT
-// client-logo__item--select
-const logoItems = document.querySelectorAll(".client-logo__item");
-[...logoItems].forEach((item) => {
-    item.addEventListener("mouseenter", function (e) {
-        item.classList.add("client-logo__item--select");
-    });
-
-    item.addEventListener("mouseleave", function (e) {
-        item.classList.remove("client-logo__item--select");
-    });
 });

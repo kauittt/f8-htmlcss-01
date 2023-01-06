@@ -710,9 +710,9 @@ a {
     cursor: pointer;
 }
 
-.footer-list__item--noHover:hover {
+.footer-list__item--noHover {
     color: #7a7a7e;
-    cursor: default;
+    cursor: none;
 }
 
 .footer-list__item--title {

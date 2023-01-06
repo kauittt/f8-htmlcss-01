@@ -691,7 +691,8 @@ a {
     margin-top: 50px;
 }
 
-.footer-list__item {
+.footer-list__item,
+.footer-list__item--noHover {
     max-width: 260px;
     font-weight: 500;
     font-size: 1.6rem;
@@ -708,11 +709,6 @@ a {
 .footer-list__item__icon:hover {
     color: var(--main-color);
     cursor: pointer;
-}
-
-.footer-list__item--noHover:hover {
-    color: #7a7a7e;
-    cursor: default;
 }
 
 .footer-list__item--title {

@@ -18,6 +18,20 @@
     <body>
         <main>
             <!--! HEADER -->
+            <form id="form">
+                <label
+                    >Some text:
+                    <input type="text" placeholder="text input" />
+                </label>
+                <label
+                    >Password:
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="password"
+                    />
+                </label>
+            </form>
             <header id="header">
                 <div class="content">
                     <div class="header-nav">
@@ -152,7 +166,7 @@
                         <img
                             src="./assets/img/client/logo-3.svg"
                             alt=""
-                            class="client-logo__item"
+                            class="client-logo__item client-logo__item--select"
                         />
                         <img
                             src="./assets/img/client/logo-4.svg"
@@ -665,9 +679,7 @@
                             >
                                 Get in touch
                             </li>
-                            <li
-                                class="footer-list__item footer-list__item--noHover"
-                            >
+                            <li class="footer-list__item">
                                 You’ll find your next home, in any style you
                                 prefer.
                             </li>
