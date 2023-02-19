@@ -37,13 +37,13 @@ window.addEventListener("scroll", debounceFn(handleWindowScroll, 25));
 function handleWindowScroll(e) {
     if (window.pageYOffset > headerNav.offsetHeight) {
         headerNav.classList.add("header-nav--fixed");
-        header.style.marginTop = `${
+        header.style.paddingTop = `${
             headerNav.offsetHeight + headerNav.style.paddingTop
         }px`;
-        console.log(document.body.scrollHeight);
+        console.log(headerNav.offsetHeight + headerNav.style.paddingTop);
     } else {
         headerNav.classList.remove("header-nav--fixed");
-        header.style.marginTop = `0px`;
+        header.style.paddingTop = `0px`;
     }
 }
 //! MODAL - DISPLAY

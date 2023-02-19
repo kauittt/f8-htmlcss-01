@@ -43,7 +43,8 @@ function handleWindowScroll(e) {
         console.log(document.body.scrollHeight);
     } else {
         headerNav.classList.remove("header-nav--fixed");
-        header.style.marginTop = `0px`;
+        header.style.paddingTop = `0px`;
+        console.log(document.body.scrollHeight);
     }
 }
 //! MODAL - DISPLAY

@@ -14,6 +14,7 @@ function handleMouseEnter(e) {
     const { width } = e.target.getBoundingClientRect();
     navHover.style.width = `${width - 28}px`;
     navHover.style.left = `${e.target.offsetLeft + 14}px`;
+    console.log(e.target);
 }
 //! SCROLL
 function debounceFn(func, wait, immediate) {
@@ -37,13 +38,10 @@ window.addEventListener("scroll", debounceFn(handleWindowScroll, 25));
 function handleWindowScroll(e) {
     if (window.pageYOffset > headerNav.offsetHeight) {
         headerNav.classList.add("header-nav--fixed");
-        header.style.marginTop = `${
-            headerNav.offsetHeight + headerNav.style.paddingTop
-        }px`;
-        console.log(document.body.scrollHeight);
+        header.style.paddingTop = `${headerNav.offsetHeight + 38}px`;
     } else {
         headerNav.classList.remove("header-nav--fixed");
-        header.style.marginTop = `0px`;
+        header.style.paddingTop = `0px`;
     }
 }
 //! MODAL - DISPLAY
